@@ -1,0 +1,32 @@
+.land{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+.land img{
+    margin-top: 60px;
+}
+.land h1{
+    text-align: center;
+    font-size: 50px;
+}
+.land span{
+    color: red;
+}
+.land-action{
+    display: flex;
+    gap: 20px;
+}
+.land-connect{
+    background: red;
+    cursor: pointer;
+    padding: 20px 40px;
+    border-radius: 50px;
+}
+
+.my-resume{
+   padding: 20px 60px;
+   border-radius: 50px;
+   border: 2px solid white;
+}
