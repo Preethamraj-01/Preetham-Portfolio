@@ -2,7 +2,7 @@ import React from 'react'
 import './NavBar.css'
 import logo from '../../assets/logo.svg'
 
-export const NavBar = () => {
+export const NavBar = ({ toggleTheme, currentTheme }) => {
   return (
     <div className='navbar'>
         <img src={logo} alt='logo' />
@@ -13,7 +13,13 @@ export const NavBar = () => {
             <li>Portfolio</li>
             <li>Hire Me</li>
         </ul>
+         <div className="nav-actions">
+        <button className="theme-toggle-btn" onClick={toggleTheme}>
+          {currentTheme === 'light' ? '🌙 Dark' : '☀️ Light'}
+        </button>
+
         <div className="nav-hire">Hire Me</div>
+      </div>
     </div>
   )
 }

@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 35px;
+    gap: 35px;   
 }
 .land img{
     margin-top: 60px;
