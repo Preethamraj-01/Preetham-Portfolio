@@ -6,7 +6,7 @@ import './Landing.css'
 const Landing = () => {
   return (
     <div className='land'>
-        <img src='' alt='profile image'/>
+        <img height={200} src='' alt='profile image'/>
         <h1><span>Hi I am Preetham, </span>Developer</h1>
         <p>decription</p>
         <div className="land-action">

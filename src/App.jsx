@@ -2,6 +2,7 @@ import React, { useState, useEffect ,useRef } from 'react';
 import NavBar from './Components/NavBar/NavBar'
 import Landing from './Components/LandingPage/Landing'
 import './App.css'; 
+import { About } from './Components/About/About';
 
 const App = () => {
 
@@ -34,6 +35,7 @@ useEffect(() => {
     <div>
       <NavBar toggleTheme={toggleTheme} currentTheme={theme} />
       <Landing />
+      <About/>
     </div>
   );
 };

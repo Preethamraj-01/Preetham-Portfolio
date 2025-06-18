@@ -1,0 +1,75 @@
+.about{
+    display: flex; /* places in row or column*/
+    flex-direction: column; /* places all child elements in column*/
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+.about-title{
+    position: relative; /* placed relative to the normal flow of web*/
+}
+
+.about-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.about-title img{
+    position: absolute; /*it works with nearest postion:relative ancestor */
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.about-sections{
+    display: flex;
+    gap: 80px;
+}
+.about-right{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.about-para{
+    display: flex;
+    flex-direction: column;   
+    gap: 20px;
+}
+
+.about-skills{
+    display: flex;
+    flex-direction: column;   
+    gap: 20px;
+}
+
+/* .about-skill{
+    display: flex;
+    align-items: center; 
+    transition: 0.3s;
+    gap: 50px;
+} */
+
+.about-skill p{
+    min-width: 150px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.about-skill hr{
+    outline: none;
+    border: none;
+    width: 50%;
+    height: 4px;
+    border-radius: 50px;
+    background: linear-gradient(264deg,#df8908,#b415ff);
+}
+
+.about-achievements{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;/*Distributes the child elements evenly across the row*/
+    margin-bottom: 60px;
+}
