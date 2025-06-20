@@ -3,6 +3,8 @@ import NavBar from './Components/NavBar/NavBar'
 import Landing from './Components/LandingPage/Landing'
 import './App.css'; 
 import { About } from './Components/About/About';
+import Projects from './Components/Projects/Projects';
+import Contact from './Components/Contact/Contact';
 
 const App = () => {
 
@@ -36,6 +38,8 @@ useEffect(() => {
       <NavBar toggleTheme={toggleTheme} currentTheme={theme} />
       <Landing />
       <About/>
+      <Projects/>
+      <Contact/>
     </div>
   );
 };
