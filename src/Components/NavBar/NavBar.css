@@ -1,16 +1,32 @@
-.navbar{
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin: 20px 150px;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+  margin-top: 50px;
+  height: 60px;
 }
-.nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap:60px;
-    font-size: 20px;
+
+.navbar p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav-hire{
     padding: 20px 40px;
     border-radius: 50px;

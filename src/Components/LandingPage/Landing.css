@@ -1,15 +1,15 @@
-.land{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 35px;   
+.land {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;           /* Makes it responsive */
+  padding: 60px 80px;
 }
-.land img{
-    margin-top: 60px;
-}
+
+
 .land h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
 }
 .land span{
     color: red;
@@ -29,4 +29,18 @@
    padding: 20px 60px;
    border-radius: 50px;
    border: 2px solid white;
+}
+.rotating-title {
+  margin: 10px 0;
+  color: #0a66c2;
+  font-weight: 500;
+  font-size: 1.5rem;
+  animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(10px); }
+  20%  { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
 }

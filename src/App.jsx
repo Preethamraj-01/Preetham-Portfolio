@@ -1,18 +1,23 @@
-import React, { useState, useEffect ,useRef } from 'react';
-import NavBar from './Components/NavBar/NavBar'
-import Landing from './Components/LandingPage/Landing'
-import './App.css'; 
-import { About } from './Components/About/About';
-import Projects from './Components/Projects/Projects';
-import Contact from './Components/Contact/Contact';
+import React, { useState, useEffect, useRef } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import NavBar from "./Components/NavBar/NavBar";
+import Landing from "./Components/LandingPage/Landing";
+import { About } from "./Components/About/About";
+import Projects from "./Components/Projects/Projects";
+import Contact from "./Components/Contact/Contact";
+import "./App.css";
 
 const App = () => {
+  const [theme, setTheme] = useState("dark");
+  const firstRender = useRef(true);
 
- const [theme, setTheme] = useState('dark');
- const firstRender = useRef(true);
-
-useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
     }
@@ -26,21 +31,30 @@ useEffect(() => {
       return;
     }
 
-    localStorage.setItem('theme', theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   return (
-    <div>
+    <Router>
       <NavBar toggleTheme={toggleTheme} currentTheme={theme} />
-      <Landing />
-      <About/>
-      <Projects/>
-      <Contact/>
-    </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Landing />
+              <About />
+              <Projects />
+              <Contact />
+            </>
+          }
+        />
+      </Routes>
+    </Router>
   );
 };
 
