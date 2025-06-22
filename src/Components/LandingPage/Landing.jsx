@@ -20,33 +20,63 @@ const Landing = () => {
     <div className="land" id="landing">
       <div className="land-left">
         <h1>
-          <p className="greeting">Hey there!</p>
-          <p className="intro">I'm Preetham</p>
+          <p className="greeting">
+            Hey there!
+            <span role="img" aria-label="hi" className="wave-icon">
+              👋
+            </span>
+          </p>
+          <p className="intro">I'm G R Preetham</p>
           <p className="rotating-title">{titles[index]}</p>
         </h1>
         <p className="description">
-          I build robust full-stack web applications with modern technologies
-          and performance in mind.
+          I’m passionate about solving real-world problems and crafting
+          solutions that make a meaningful impact. Thank you for exploring my
+          portfolio — stay curious and keep building!🚀
         </p>
-        <div className="land-action">
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            className="land-connect"
-          >
-            Hire Me
-          </Link>
 
+        <div className="land-action">
           <a
             href="https://drive.google.com/file/d/1vuGPYt929iPPL-_0zBLk-g3XqU1bOP5l/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="my-resume"
-            style={{ display: "flex", alignItems: "center", gap: "8px" }}
+            className="glass-btn resume-btn"
           >
-            My Resume
-            <FiDownload />
+            My Resume <FiDownload />
+          </a>
+
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="glass-btn contact-btn"
+          >
+            Contact Me
+          </Link>
+        </div>
+
+        <div className="social-icons">
+          <a
+            href="https://github.com/yourgithub"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-brands fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/yourlinkedin"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-brands fa-linkedin"></i>
+          </a>
+          
+          <a
+            href="https://leetcode.com/u/Preethamraj__01/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-solid fa-code"></i>
           </a>
         </div>
       </div>

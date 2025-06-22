@@ -22,17 +22,26 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
           </li>
           <li>
             <Link to="about" smooth={true} duration={500}>
-              About
+              Skills
             </Link>
           </li>
+          <li>Experince</li>
+          <li> <Link to="education" smooth={true} duration={500}>
+              Education
+            </Link></li>
           <li>
             <Link to="projects" smooth={true} duration={500}>
               Projects
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} duration={500}>
-              Contact
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hire-me-dance "
+            >
+              Hire Me
             </Link>
           </li>
         </ul>

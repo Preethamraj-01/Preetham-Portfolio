@@ -1,0 +1,74 @@
+.education-section {
+  padding: 60px 20px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  margin: 150px;
+}
+
+.education-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  border-left: 5px solid #5900ff;
+  padding-left: 15px;
+}
+
+.education-timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #555;
+}
+
+.education-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.education-dot {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  height: 12px;
+  width: 12px;
+  background-color: #0026ff;
+  border-radius: 50%;
+}
+
+.education-content {
+  padding-left: 10px;
+}
+
+.education-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.edu-icon {
+  color: #003cff;
+  margin-right: 6px;
+}
+
+.institution {
+  color: #7700ff;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.edu-meta {
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.edu-meta svg {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.edu-description {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}

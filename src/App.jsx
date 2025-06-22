@@ -11,6 +11,7 @@ import { About } from "./Components/About/About";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import "./App.css";
+import Education from "./Components/Education/Education";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -39,7 +40,8 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router >
+      <div className="pages">
       <NavBar toggleTheme={toggleTheme} currentTheme={theme} />
       <Routes>
         <Route
@@ -48,12 +50,14 @@ const App = () => {
             <>
               <Landing />
               <About />
+              <Education/>
               <Projects />
               <Contact />
             </>
           }
         />
       </Routes>
+      </div>
     </Router>
   );
 };

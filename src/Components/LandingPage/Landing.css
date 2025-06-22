@@ -2,39 +2,111 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;           /* Makes it responsive */
   padding: 60px 80px;
+  margin-left: 165px;
+}
+
+.greeting {
+  display: inline-block;
+  background: linear-gradient(135deg, #222835, #151617); /* or any gradient */
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+.land-left h1{
+    margin-bottom: 40px;
+}
+
+.wave-icon {
+  margin-right: 8px;
+  animation: wave 2s infinite;
+  display: inline-block;
+}
+
+/* Optional waving animation */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.glass-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.glass-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.intro{
+    font-size: 40px;
+}
+
+.contact-btn {
+  background-color: #b663ff;
+  color: white;
+  margin: 10px;
+  border: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
 }
 
 
-.land h1{
-    text-align: center;
-    font-size: 30px;
-}
-.land span{
-    color: red;
-}
 .land-action{
-    display: flex;
-    gap: 20px;
-}
-.land-connect{
-    background: red;
-    cursor: pointer;
-    padding: 20px 40px;
-    border-radius: 50px;
+    margin-top: 30px;
 }
 
-.my-resume{
-   padding: 20px 60px;
-   border-radius: 50px;
-   border: 2px solid white;
-}
+
 .rotating-title {
   margin: 10px 0;
-  color: #0a66c2;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 25px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
   animation: fadeInOut 2s infinite;
 }
 
