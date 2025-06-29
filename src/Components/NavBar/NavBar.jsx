@@ -15,26 +15,28 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
       </p>
       <div className="nav-right">
         <ul className="nav-menu">
-          <li>
+          <li className="nav-landing">
             <Link to="landing" smooth={true} duration={500}>
               Home
             </Link>
           </li>
-          <li>
+          <li className="nav-about">
             <Link to="about" smooth={true} duration={500}>
               Skills
             </Link>
           </li>
-          <li>Experince</li>
-          <li> <Link to="education" smooth={true} duration={500}>
+          <li className="nav-Experience"><Link to="experience" smooth={true} duration={500}>
+              Experience
+            </Link></li>
+          <li className="nav-education"> <Link to="education" smooth={true} duration={500}>
               Education
             </Link></li>
-          <li>
+          <li className="nav-projects">
             <Link to="projects" smooth={true} duration={500}>
               Projects
             </Link>
           </li>
-          <li>
+          <li className="nav-hire">
             <Link
               to="contact"
               smooth={true}

@@ -28,32 +28,23 @@
   padding: 0;
 }
 
+.nav-landing:hover,
+.nav-about:hover,
+.nav-Experience:hover,
+.nav-education:hover,
+.nav-projects:hover {
+  color: #05a54a;
+  cursor: pointer;
+}
+
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.nav-hire{
-    padding: 20px 40px;
-    border-radius: 50px;
-    background: red;
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.nav-hire:hover{
-    transform: scale(1.05);
-}
 
-.highlight-on-load {
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
 
 @keyframes dance {
   0%, 100% {
@@ -76,6 +67,9 @@
 .hire-me-dance {
   display: inline-block;
   animation: dance 1s ease-in-out infinite;
-  font-weight: bold;
-  color: #003cff;
+  color: white;
+  border-radius: 20px;
+  padding: 8px;
+  background-color: #05a54a;
 }
+

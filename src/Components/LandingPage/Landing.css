@@ -4,6 +4,7 @@
   align-items: center;
   padding: 60px 80px;
   margin-left: 165px;
+  margin-top: 50px;
 }
 
 .greeting {
@@ -65,8 +66,13 @@
     font-size: 40px;
 }
 
+.my-name{
+   font-size: 40px;
+    color: #31c471;
+}
+
 .contact-btn {
-  background-color: #b663ff;
+  background-color: #05a54a;
   color: white;
   margin: 10px;
   border: none;
@@ -83,13 +89,13 @@
   padding: 12px;
   border-radius: 50%;
   color: white;
-  font-size: 1.2rem;
-  transition: 0.3s ease;
+  font-size: 18px;
 }
 
 .social-icons a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
+  border: 2px solid #05a54a;
+  background: rgba(255, 255, 255, 0.1);
+
 }
 
 
@@ -102,7 +108,7 @@
   margin: 10px 0;
   font-weight: 500;
   font-size: 25px;
-  background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue gradient */
+  background: whitesmoke;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,4 +121,8 @@
   20%  { opacity: 1; transform: translateY(0); }
   80%  { opacity: 1; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.resume-btn:hover{
+   border: 2px solid #05a54a;
 }

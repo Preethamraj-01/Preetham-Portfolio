@@ -4,7 +4,7 @@ import profile_img from "../../assets/profile_image.svg";
 import { FiDownload } from "react-icons/fi";
 import { Link } from "react-scroll";
 
-const titles = ["Front-end Developer", "Back-end Developer", ".Net Developer"];
+const titles = [ ".Net Developer","React JS Developer", "Back-end Developer"];
 
 const Landing = () => {
   const [index, setIndex] = useState(0);
@@ -12,7 +12,7 @@ const Landing = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % titles.length);
-    }, 2000); // change every 2s
+    }, 1000); // change every 2s
     return () => clearInterval(interval);
   }, []);
 
@@ -26,7 +26,7 @@ const Landing = () => {
               👋
             </span>
           </p>
-          <p className="intro">I'm G R Preetham</p>
+          <p className="intro">I'm <span className="my-name">G R Preetham</span></p>
           <p className="rotating-title">{titles[index]}</p>
         </h1>
         <p className="description">
@@ -60,6 +60,7 @@ const Landing = () => {
             href="https://github.com/yourgithub"
             target="_blank"
             rel="noreferrer"
+            className="git-hub"
           >
             <i className="fa-brands fa-github"></i>
           </a>
@@ -67,6 +68,7 @@ const Landing = () => {
             href="https://linkedin.com/in/yourlinkedin"
             target="_blank"
             rel="noreferrer"
+            className="linkedin"
           >
             <i className="fa-brands fa-linkedin"></i>
           </a>
@@ -75,6 +77,7 @@ const Landing = () => {
             href="https://leetcode.com/u/Preethamraj__01/"
             target="_blank"
             rel="noreferrer"
+            className="leetcode"
           >
             <i className="fa-solid fa-code"></i>
           </a>
