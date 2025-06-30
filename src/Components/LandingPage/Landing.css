@@ -85,17 +85,33 @@
 }
 
 .social-icons a {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 12px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
   font-size: 18px;
 }
 
-.social-icons a:hover {
-  border: 2px solid #05a54a;
-  background: rgba(255, 255, 255, 0.1);
+.git-hub:hover {
+  color: #866060; /* GitHub dark */
+  transform: scale(1.2);
+}
 
+.linkedin:hover {
+  color: #0077b5; /* LinkedIn blue */
+  transform: scale(1.2);
+}
+
+.leetcode:hover {
+  color: #f89f1b; /* LeetCode orange */
+  transform: scale(1.2);
 }
 
 

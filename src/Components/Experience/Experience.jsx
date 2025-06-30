@@ -3,37 +3,38 @@ import { FaMapMarkerAlt, FaCalendarAlt, FaLaptopCode } from 'react-icons/fa';
 
 const educationData = [
   {
+    role:"Associate Software Engineer",
     company: "West Pharmaceuticals",
-    location: 'karnataka',
-    duration: '2023',
-    percentage:'8.71(cgpa)',
+    location: 'Bangalore, Karnataka',
+    duration: 'May 2024 - Present',
+    designation:'Full-time',
     description:
-      'Completed Bachelor of Engineering in Computer Science and Engineering in 2023 with a CGPA of 8.71 and no backlogs, with a strong focus on Computer Science fundamentals, mathematics, and programming.',
+      'Gained hands-on experience in developing and maintaining applications using .NET MAUI, React JS for front-end development, MS SQL for database management, and C# for backend logic, along with Microsoft Azure for cloud deployment and DevOps operations.',
   },
   {
+    role:"Graduate Software Trainee",
     company: 'West Pharmaceuticals',
-    location: 'karnataka',
-    duration: '2017 - 2019',
-    percentage:'93',
-
-    description:
-      'Completed Pre-University (PU) in 2019 with a PCMB course, focusing primarily on Mathematics, and achieved a percentage of 93%, along with a KCET rank of 3400.',
-  },
+    location: 'Bangalore, Karnataka',
+    duration: 'July 2023 - April 2024. 10 mos',
+    designation:'Internship',
+    description:'Gaining practical experience during an internship in full-stack development using ASP.NET Web Forms, RESTful APIs, .NET MAUI, Java, C#, HTML, CSS, and JavaScript, with exposure to both client-side UI design and server-side logic.',
+  },    
   
 ];
 
 const Experience = () => {
   return (
     <section className="education-section" id="experience">
-      <h2 className="education-title">Education</h2>
+      <h2 className="education-title">Work Experience</h2>
       <div className="education-timeline">
         {educationData.map((item, index) => (
           <div key={index} className="education-item">
             <div className="education-dot"></div>
             <div className="education-content">
               <h3>
-                <FaLaptopCode   className="edu-icon" /> {item.company}
+                <FaLaptopCode   className="edu-icon" /> {item.role}
               </h3>
+              <p>{item.company}.  {item.designation}</p>
               <h4 className="institution">{item.institution}</h4>
               <p className="edu-meta">
                 <span><FaCalendarAlt /> {item.duration}</span> &nbsp;
