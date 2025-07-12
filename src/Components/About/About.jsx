@@ -1,66 +1,60 @@
 import React from "react";
 import "./About.css";
-import theme_pattern from "../../assets/theme_pattern.svg";
+
+const skillsData = [
+  { name: "HTML/CSS", level: 95 },
+  { name: "Java", level: 85 },
+  { name: ".NET", level: 85 },
+  { name: "Rest API", level: 70 },
+  { name: "Express", level: 85 },
+  { name: "SQL Server", level: 75 },
+  { name: "JavaScript", level: 90 },
+  { name: "React", level: 90 },
+  { name: "Python", level: 75 },
+  { name: ".Net MAUI", level: 80 },
+  { name: "Azure Devops", level: 90 },
+];
 
 export const About = () => {
+  const firstColumn = skillsData.slice(0, 6);
+  const secondColumn = skillsData.slice(6);
   return (
-    <div className="about" id="about">
-      <div className="about-title">
-        <h1>About me</h1>
-        <img src={theme_pattern}></img>
-      </div>
-      <div className="about-sections">
-        <div className="about-left">
-          <img src="" alt="profile"></img>
+    <div className="skills-section" id="about">
+      <h2 className="skills-title">Skills</h2>
+      <div className="skills-container">
+        <div className="skills-column">
+          {firstColumn.map((skill, index) => (
+            <div key={index} className="skill">
+              <div className="skill-label">
+                <span>{skill.name}</span>
+                <span>{skill.level}%</span>
+              </div>
+              <div className="skill-bar">
+                <div
+                  className="skill-progress"
+                  style={{ width: `${skill.level}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="about-right">
-          <div className="about-para">
-            <p>
-              About me desc I'm looking for a new opportunity because I feel my
-              learning has plateaued in my current role. I'm eager to take on
-              more challenging and growth-oriented work. I want to be in an
-              environment that pushes me technically and helps me grow faster.
-            </p>
-            <p>Desc line 2</p>
-          </div>
-
-          <div className="about-skills">
-            <div className="about-skill">
-              <p>
-                Skill 1 <hr style={{ width: "50%" }}></hr>
-              </p>
+        <div className="skills-column">
+          {secondColumn.map((skill, index) => (
+            <div key={index} className="skill">
+              <div className="skill-label">
+                <span>{skill.name}</span>
+                <span>{skill.level}%</span>
+              </div>
+              <div className="skill-bar">
+                <div
+                  className="skill-progress"
+                  style={{ width: `${skill.level}%` }}
+                ></div>
+              </div>
             </div>
-            <div className="about-skill">
-              <p>
-                Skill2 <hr style={{ width: "70%" }}></hr>
-              </p>
-            </div>
-            <div className="about-skill">
-              <p>
-                Skill3 <hr style={{ width: "40%" }}></hr>
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      <div className="about-achievements">
-        <div className="about-achievement">
-          <h1>2+</h1>
-          <p>Years of exp</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>2+</h1>
-          <p>Years of exp</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>10+</h1>
-          <p>Years of exp</p>
-        </div>
-        <hr />
       </div>
-    </div>
   );
 };

@@ -8,7 +8,6 @@ import {
 import NavBar from "./Components/NavBar/NavBar";
 import Landing from "./Components/LandingPage/Landing";
 import { About } from "./Components/About/About";
-import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import "./App.css";
 import Education from "./Components/Education/Education";
@@ -53,7 +52,6 @@ const App = () => {
               <About />
               <Experience/>
               <Education/>
-              <Projects />
               <Contact />
             </>
           }

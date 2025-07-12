@@ -4,9 +4,6 @@ import {
   FaEnvelope,
   FaWhatsapp,
   FaMapMarkerAlt,
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -40,7 +37,7 @@ const Contact = () => {
       <div className="contact-left">
         <h2 className="contact-title">Contact</h2>
         <h3>Get In Touch</h3>
-        <p>Feel free</p>
+        <p>Feel free to reach out if you have any queries.</p>
         <div className="contact-info">
           <p>
             <FaEnvelope className="icon" /> <strong>Email:</strong>{" "}
@@ -60,7 +57,7 @@ const Contact = () => {
           <h4>Social Media</h4>
           <div className="social-icons">
             <a
-              href="https://github.com/yourgithub"
+              href="https://github.com/Preethamraj-01"
               target="_blank"
               rel="noreferrer"
               className="git-hub"
@@ -68,7 +65,7 @@ const Contact = () => {
               <i className="fa-brands fa-github"></i>
             </a>
             <a
-              href="https://linkedin.com/in/yourlinkedin"
+              href="https://www.linkedin.com/in/g-r-preetham-212097225/"
               target="_blank"
               rel="noreferrer"
               className="linkedin"
@@ -88,7 +85,7 @@ const Contact = () => {
         </div>
       </div>
       <form onSubmit={onSubmit} className="contact-right">
-        <label htmlFor="">Your Name</label>
+        <label htmlFor="" className="">Your Name</label>
         <input type="text" placeholder="Enter Your Name" name="name"></input>
         <label htmlFor="">Your Email</label>
         <input type="text" placeholder="Enter Your Email" name="name"></input>
@@ -99,7 +96,7 @@ const Contact = () => {
           name="message"
         ></textarea>
         <button type="submit" className="contact-submit">
-          Submit now
+          Send Message
         </button>
         <p className="contact-result">{result}</p>
       </form>

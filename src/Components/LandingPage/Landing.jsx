@@ -4,7 +4,7 @@ import profile_img from "../../assets/profile_image.svg";
 import { FiDownload } from "react-icons/fi";
 import { Link } from "react-scroll";
 
-const titles = [ ".Net Developer","React JS Developer", "Back-end Developer"];
+const titles = [ "Java Developer",".Net Developer","React JS", "Back-end Developer"];
 
 const Landing = () => {
   const [index, setIndex] = useState(0);
