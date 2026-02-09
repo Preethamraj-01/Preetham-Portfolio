@@ -7,15 +7,19 @@ const AIChat = ({ isOpen, onClose, resumeUrl }) => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Parse and format response with highlighted headings and key details
+  // Parse and format response - highlight headings automatically
   const formatResponse = (text) => {
     const lines = text.split("\n");
     return lines.map((line, idx) => {
-      // Bold headings (lines ending with : or starting with a capital word followed by :)
-      if (line.match(/^[A-Z].*:$/) || line.trim().endsWith(":")) {
-        return <strong key={idx} style={{ display: "block", marginTop: "8px", color: "#2dd4bf" }}>{line}</strong>;
+      const trimmed = line.trim();
+      // Detect headings (lines ending with : or starting with capital letters followed by :)
+      if (trimmed.endsWith(":")) {
+        return (
+          <span key={idx} style={{ display: "block", fontWeight: "600", color: "#2dd4bf", marginTop: "8px" }}>
+            {line}
+          </span>
+        );
       }
-      // Keep bullet points and regular text
       return <span key={idx} style={{ display: "block" }}>{line}</span>;
     });
   };
