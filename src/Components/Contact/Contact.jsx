@@ -1,10 +1,6 @@
 import "./Contact.css";
 import React, { useState } from "react";
-import {
-  FaEnvelope,
-  FaWhatsapp,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -34,8 +30,10 @@ const Contact = () => {
 
   return (
     <section className="contact-section" id="contact">
-      <div className="contact-left">
+      <div>
         <h2 className="contact-title">Contact</h2>
+      </div>
+      <div className="contact-left">
         <h3>Get In Touch</h3>
         <p>Feel free to reach out if you have any queries.</p>
         <div className="contact-info">
@@ -85,7 +83,9 @@ const Contact = () => {
         </div>
       </div>
       <form onSubmit={onSubmit} className="contact-right">
-        <label htmlFor="" className="">Your Name</label>
+        <label htmlFor="" className="">
+          Your Name
+        </label>
         <input type="text" placeholder="Enter Your Name" name="name"></input>
         <label htmlFor="">Your Email</label>
         <input type="text" placeholder="Enter Your Email" name="name"></input>
