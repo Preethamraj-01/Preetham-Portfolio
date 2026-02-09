@@ -99,7 +99,7 @@ const Landing = () => {
         <FaRobot />
       </button>
 
-      <AIChat isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} />
+      <AIChat isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} resumeUrl={"https://drive.google.com/file/d/1vuGPYt929iPPL-_0zBLk-g3XqU1bOP5l/view"} />
     </div>
   );
 };
