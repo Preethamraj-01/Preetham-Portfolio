@@ -3,11 +3,14 @@ import "./Landing.css";
 import profile_img from "../../assets/profile_image.svg";
 import { FiDownload } from "react-icons/fi";
 import { Link } from "react-scroll";
+import AIChat from "../AIChat/AIChat";
+import { FaRobot } from "react-icons/fa";
 
 const titles = [ "Java Developer",".Net Developer","React JS", "Back-end Developer"];
 
 const Landing = () => {
   const [index, setIndex] = useState(0);
+  const [aiChatOpen, setAiChatOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -87,6 +90,16 @@ const Landing = () => {
       <div className="land-right">
         <img height={300} src={profile_img} alt="profile" />
       </div>
+
+      <button 
+        className="ai-chat-btn"
+        onClick={() => setAiChatOpen(!aiChatOpen)}
+        title="Ask AI Assistant"
+      >
+        <FaRobot />
+      </button>
+
+      <AIChat isOpen={aiChatOpen} onClose={() => setAiChatOpen(false)} />
     </div>
   );
 };
